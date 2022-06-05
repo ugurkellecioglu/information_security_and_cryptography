@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="632.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIController">
+  <tabs>
+    <Tab text="Key Generation">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="825.0" prefWidth="632.0">
+               <children>
+                  <Button fx:id="createKeyPair" layoutX="22.0" layoutY="220.0" mnemonicParsing="false" onAction="#createKeyPair" prefHeight="33.0" prefWidth="96.0" text="Create Key Pair" />
+                  <Label layoutX="22.0" layoutY="451.0" prefHeight="18.0" prefWidth="67.0" text="Private Key" />
+                  <ComboBox fx:id="privateKeys" disable="true" layoutX="24.0" layoutY="467.0" prefWidth="150.0" promptText="Select a Key" />
+                  <TextArea fx:id="plainText" layoutX="196.0" layoutY="461.0" prefHeight="25.0" prefWidth="256.0" />
+                  <Button fx:id="encrypt" disable="true" layoutX="461.0" layoutY="467.0" mnemonicParsing="false" onAction="#encrypt" text="Encrypt" />
+                  <Button fx:id="decrypt" disable="true" layoutX="460.0" layoutY="535.0" mnemonicParsing="false" onAction="#decrypt" text="Decrypt" />
+                  <TextArea fx:id="cipherText" layoutX="196.0" layoutY="529.0" prefHeight="16.0" prefWidth="255.0" />
+                  <TextArea fx:id="pTextArea" editable="false" layoutX="20.0" layoutY="44.0" prefHeight="38.0" prefWidth="581.0" promptText="P value" />
+                  <TextArea fx:id="qTextArea" editable="false" layoutX="18.0" layoutY="109.0" prefHeight="38.0" prefWidth="579.0" promptText="Q value" />
+                  <TextArea fx:id="toitentTextArea" editable="false" layoutX="18.0" layoutY="175.0" prefHeight="17.0" prefWidth="580.0" promptText="Toitent function" />
+                  <Label layoutX="22.0" layoutY="82.0" text="Q:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="14.0" text="P:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="147.0" text="Toitent:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="500.0" prefHeight="18.0" prefWidth="67.0" text="Public Key" />
+                  <ComboBox fx:id="publicKeys" disable="true" layoutX="24.0" layoutY="516.0" prefWidth="150.0" promptText="Select a Key" />
+                  <TextArea fx:id="publicKeyTextArea" editable="false" layoutX="21.0" layoutY="281.0" prefHeight="17.0" prefWidth="580.0" promptText="Public Key" />
+                  <TextArea fx:id="alicesKeyTextArea" editable="false" layoutX="21.0" layoutY="338.0" prefHeight="17.0" prefWidth="580.0" promptText="Alices Private Key" />
+                  <TextArea fx:id="bobsKeyTextArea" editable="false" layoutX="21.0" layoutY="393.0" prefHeight="17.0" prefWidth="580.0" promptText="Bobs Private Key" />
+                  <Label layoutX="196.0" layoutY="442.0" prefHeight="18.0" prefWidth="67.0" text="Plain Text" />
+                  <Label layoutX="196.0" layoutY="507.0" prefHeight="18.0" prefWidth="67.0" text="Cipher Text" />
+                  <TextArea fx:id="testPrimalityTextArea" layoutX="28.0" layoutY="584.0" prefHeight="20.0" prefWidth="390.0" />
+                  <Button layoutX="452.0" layoutY="591.0" mnemonicParsing="false" onAction="#testPrimality" text="Test Primality" />
+                  <Label layoutX="22.0" layoutY="262.0" prefHeight="18.0" prefWidth="67.0" text="Public Key" />
+                  <Label layoutX="22.0" layoutY="319.0" prefHeight="18.0" prefWidth="117.0" text="Alices Private Key" />
+                  <Label layoutX="22.0" layoutY="376.0" prefHeight="18.0" prefWidth="117.0" text="Bobs Private Key" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
